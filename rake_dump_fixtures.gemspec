@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = RakeDumpFixtures::VERSION
   spec.authors       = ["Masato Ikeda"]
   spec.email         = ["masato.ikeda@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Add `rake db:fixtures:dump` task to extract records to YAML fixtures.}
+  spec.description   = %q{Add `rake db:fixtures:dump` task to extract records to YAML fixtures. You can specify dumping tables.}
+  spec.homepage      = "https://github.com/a2ikm/rake_dump_fixtures"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "rails", ">= 4.0.0"
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
 end
